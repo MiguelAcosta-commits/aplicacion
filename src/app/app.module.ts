@@ -5,6 +5,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+//import necesario para manejar el local storage
+import { IonicStorageModule } from '@ionic/storage';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ResultadosPage } from '../pages/resultados/resultados';
@@ -39,7 +42,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     FormsModule,
-    CustomFormsModule
+    CustomFormsModule,
+    IonicStorageModule.forRoot()
 
   ],
   bootstrap: [IonicApp],
